@@ -2,6 +2,7 @@ import java.time.LocalDate;
 
 import pacote.carro;
 import pacote.contabancaria;
+import pacote.evento;
 import pacote.reservas;
 
 public class App {
@@ -29,11 +30,17 @@ public class App {
             //conta.exibirSaldo();
 
             //Ex2
-            reservas reservasDoDia = new reservas("joao paulo", 5, LocalDate.of(2006, 5, 23), 10000);
-            reservasDoDia.dadosDaReserva("joao paulo", 5, "2006-05-23", 10000);
+    //         reservas reservasDoDia = new reservas("joao paulo", 5, LocalDate.of(2006, 5, 23), 10000);
+    //         reservasDoDia.dadosDaReserva("joao paulo", 5, "2006-05-23", 10000);
         
-            double valorTotal = reservasDoDia.calcularValorDaReserva();
-            System.out.println("Valor total da reserva: R$ " + valorTotal);
-    }
+    //         double valorTotal = reservasDoDia.calcularValorDaReserva();
+    //         System.out.println("Valor total da reserva: R$ " + valorTotal);
+
+            //Ex3
+            evento eventoDoDia = new evento("mandifest", LocalDate.of(2025, 5, 31), 200, 300, 250);
+        
+            eventoDoDia.venderIngresso(50); 
+            eventoDoDia.verArrecadacao();
+     }
     
 }
